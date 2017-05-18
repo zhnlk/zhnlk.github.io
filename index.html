@@ -490,7 +490,6 @@
 <p><a href="https://yq.aliyun.com/articles/8607" target="_blank" rel="external">hexo折腾记</a></p>
 <p><a href="http://wp.huangshiyang.com/hexo%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" target="_blank" rel="external">hexo常见问题总结</a></p>
 </blockquote>
-<p>122.gif<img src="/images/pasted-0.png" alt="pasted image"></p>
 <h2 id="具体配置"><a href="#具体配置" class="headerlink" title="具体配置"></a>具体配置</h2><p>1.安装plugins<br>    1.git<br>    npm install hexo-deployer-git –save<br>    2,hexo-admin<br>    npm install –save hexo-admin<br>    3,hexo-qiniu-sync<br>    npm install hexo-qiniu-sync –save</p>
 <ol>
 <li>加入category列表</li>
@@ -503,6 +502,9 @@
 <p> 2.about<br> 3.<br>4.增加七牛的支持<br> <a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="external">github-ref</a></p>
 </li>
 </ol>
+<p>关于图片上传存在的问题<br>通过使用hexo/admin页面直接粘贴进编辑页面的图片<br>路径会使用/images/pasted..<br>然后，hexo d 会直接上传<br>通过七牛的图片没有用到<br>这他妈就尴尬了额</p>
+<p>期待效果<br>hexo/admin粘贴的图片能够直接复制到在七牛配置中的静态路径下<br>然后通过七牛的上传，拿到对应的链接地址<br>在文章中的对应位置显示该路径<br>从而在文章中通使用cdn的路径，而不是将图片全部上传<br>优点：1，节省空间，2，加快访问速度，3，方便资源统一管理<br>恩，待修改<br>1，hexo/admin的图片上传逻辑<br>2，七牛对应的上传图片逻辑<br>3，图片统一管理时候的业务</p>
+<p>122.gif<img src="/images/pasted-0.png" alt="pasted image"></p>
 
           
         
@@ -753,7 +755,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
