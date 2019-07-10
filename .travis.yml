@@ -9,6 +9,13 @@ branches:
   only:
   - master
 
-cache:
-  directories:
-    - node_modules
+# cache:
+#   directories:
+#     - node_modules
+
+install:
+- npm install hexo-cli -g
+- npm install
+
+script:
+- npm run deploy
